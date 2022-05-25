@@ -1,0 +1,60 @@
+body {
+  background-color: antiquewhite;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgb(113, 107, 107);
+  border: 5px solid rgba(135, 25, 25, 0.392);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cell:hover {
+  background-color: rgb(188, 135, 66);
+}
+
+.timer {
+  background-color: rgb(232, 160, 160);
+}
+
+button {
+  background-color: rgba(57, 102, 199, 0.801);
+  text-align: center;
+  transition: 0.3s;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button:hover {
+  background-color: rgb(235, 252, 202);
+}
+
+table {
+  margin: auto;
+}
+
+.score {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.timer {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.play-again-btn {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  margin: auto;
+}
+
+.lives {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
