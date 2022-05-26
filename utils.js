@@ -1,10 +1,5 @@
 'user strict';
 
-function renderCell(location, value) {
-  var elCell = document.querySelector(`.cell${location.i}-${location.j}`);
-  elCell.innerHTML = value;
-}
-
 function getClassName(location) {
   var cellClass = 'cell' + location.i + '-' + location.j;
   return cellClass;
@@ -29,7 +24,7 @@ function emptyCells() {
 
 function timer() {
   gStartTime = Date.now();
-  gIntervalId = setInterval(updateTime, 80);
+  gInterval = setInterval(updateTime, 80);
 }
 
 function updateTime() {
@@ -38,4 +33,22 @@ function updateTime() {
   var secondsPast = diff / 1000;
   var elTimerSpan = document.querySelector('.timer');
   elTimerSpan.innerText = secondsPast.toFixed(3);
+}
+
+function toggleGame(elBtn) {
+  timerEnd();
+  timerReset();
+  if (elBtn.innerText === 'Easy') {
+    gLevel.size = 4;
+    gLevel.mines = 2;
+  }
+  if (elBtn.innerText === 'Medium') {
+    gLevel.size = 8;
+    gLevel.mines = 12;
+  }
+  if (elBtn.innerText === 'Survival') {
+    gLevel.size = 12;
+    gLevel.mines = 30;
+  }
+  initGame();
 }

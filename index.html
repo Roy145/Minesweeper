@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MineSweeper</title>
+    <title>Minesweeper</title>
     <link rel="stylesheet" href="main.css" />
   </head>
-  <body onload="initGame(event)" oncontextmenu="return false"">
-  <span class="timer" id="timer"></span>
-  <button onclick="play(4,2)">Easy</button>
-  <button onclick="play(8,12)">Medium</button>
-  <button onclick="play(12,30)">Survival</button>
+  <body onload="initGame()" oncontextmenu="return false"">
+  <span class="timer" id="timer">READY?</span>
+  <button class="level-btn" onclick="play(4,2)">EASY</button>
+  <button class="level-btn" onclick="play(8,12)">MEDIUM</button>
+  <button class="level-btn" onclick="play(12,30)">SURVIVAL</button>
 
-  <h2 class="score">Score: <span>0</span></h2>
+  <h2 class="score">SCORE: <span>0</span></h2>
 
   <body>
-    <div class="lives">Health: 💕💕💕</div>
+    <div class="lives">LIVES LEFT: 💕💕💕</div>
     <div onclick="resetGame()" class="play-again-btn">😀</div>
     <table>
       <tbody class="board-container"></tbody>
     </table>
-
-    <script src="game.js"></script>
+    <div class="footer">
+      <p>All rights reserved © Roy Leybovitch 2022</p>
+    </div>
     <script src="utils.js"></script>
+    <script src="game.js"></script>
   </body>
 </html>
